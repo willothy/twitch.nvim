@@ -1,0 +1,24 @@
+[package]
+name = "nvim-twitch"
+version = "0.1.0"
+edition = "2021"
+authors = ["Will Hopkins <willothyh@gmail.com>"]
+description = "Twitch chat for Neovim, because... why not?"
+
+
+[lib]
+name = "twitch"
+# crate-type = ["cdylib", "lib"]
+crate-type = ["cdylib"]
+path = "src/lib.rs"
+
+# [[bin]]
+# name = "twitchy"
+# path = "src/twitchy.rs"
+
+[dependencies]
+anyhow = "1.0.70"
+nvim-oxi = { version = "0.2.2", features = ["neovim-nightly", "libuv"] }
+serde = { version = "1.0.157", features = ["derive"] }
+tokio = { version = "1.26.0", features = ["full"] }
+twitch-irc = { version = "5.0.0", features = ["serde"] }
