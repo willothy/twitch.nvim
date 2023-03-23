@@ -12,3 +12,4 @@ Features:
   - [X] Standard user messages
   - [ ] Substitute emotes
   - [ ] ...
+- [ ] Display using extmarks instead of text
